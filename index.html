@@ -87,10 +87,11 @@
 						<div class="col-md-12 heading-section ftco-animate">
 							<h1 class="big">About</h1>
 							<h2 class="mb-4">About Me</h2>
-							<p>프로그래밍 언어, 게임 엔진을 개발하고 있는 개발자 입니다. </p>
+							<p>프로그래밍 언어, 게임 엔진을 개발하는 개발자 </p>
 							<ul class="about-info mt-4 px-md-0 px-2">
 								<li class="d-flex"><span>Name:</span> <span>전영재</span></li>
-								<li class="d-flex"><span>Address:</span> <span>고양시, 춘천시, 홍천군</span></li>
+								<li class="d-flex"><span>Age:</span><span>2006년 06월 16일 (만 <span id="age"></span>세)</span></li>
+								<li class="d-flex"><span>Address:</span> <span>고양시, 춘천시</span></li>
 								<li class="d-flex"><span>Email:</span> <span>lunastev@gurmstudios.com</span></li>
 							</ul>
 						</div>
@@ -172,7 +173,18 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2024-</span>
+								<span class="date">2021-2023</span>
+								<h2>Naemyeon High School</h2>
+								<span class="position"></span>
+								<p> </p>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2024-현재</span>
 								<h2>디지털미디어콘텐츠학 전공</h2>
 								<span class="position">Hallym Polytechnic University</span>
 								<p> </p>
@@ -363,7 +375,7 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2019.09-2020.08</span>
+								<span class="date">2023.09-현재</span>
 								<div class="d-flex">
 									<h2>Wave - Programming Language</h2>
 									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
@@ -377,6 +389,36 @@
 								</div>
 								<div> <b class="text-dark">설명 : </b> Wave는 새로운 개념의 프로그래밍 언어로,
 									순수 Wave 언어만으로도 운영체제, 시스템 소프트웨어, 애플리케이션 등을 개발할 수 있는 것을 목표로 합니다. </div>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2023.12-현재</span>
+								<div class="d-flex">
+									<h2>Yujin Engine</h2>
+								</div>
+								<span class="position">Youngjae Jeon (LunaStev)</span>
+								<div> <b class="text-dark">기술 스택 : </b> Wave
+								</div>
+								<div> <b class="text-dark">설명 : </b> THE END 시리즈를 개발하기 위해 
+									개발한 3D 게임 엔진이다. </div>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2021.02-현재</span>
+								<div class="d-flex">
+									<h2>THE END 시리즈</h2>
+								</div>
+								<span class="position">Youngjae Jeon (LunaStev)</span>
+								<div> <b class="text-dark">기술 스택 : </b> Yujin Engine
+								</div>
 							</div>
 						</div>
 					</div>
@@ -416,7 +458,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Address</h3>
-							<p>고양시, 춘천시, 홍천군</p>
+							<p>고양시, 춘천시</p>
 						</div>
 					</div>
 				</div>
@@ -427,7 +469,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:lunastev@gurmstudios.com">eMail</a></p>
+							<p><a href="mailto:lunastev@gurmstudios.com">Email</a></p>
 						</div>
 					</div>
 				</div>
@@ -490,6 +532,25 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script>
+		function calculateAge(birthDate) {
+    		const today = new Date();
+    		const birth = new Date(birthDate);
+    		let age = today.getFullYear() - birth.getFullYear();
+    		const monthDiff = today.getMonth() - birth.getMonth();
+    
+    		if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    		  age--;
+    		}
+    
+  			return age;
+  		}
+
+  		const birthDate = '2006-06-16';
+  		const age = calculateAge(birthDate);
+  		document.getElementById('age').textContent = age;
+	</script>
 
 </body>
 
